@@ -10,6 +10,7 @@ public class App
     {
         System.out.println( "Hello World!" );
     }
-    public void add(){
+    public int add(int a, int b){
+        return a+b;
     }
 }
