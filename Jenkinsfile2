@@ -1,0 +1,14 @@
+pipeline
+{
+agent any
+stages{
+stage{git clone url}
+steps{
+       git branch: '*/master', url: 'https://github.com/MAVEN-Projects/JarProjects.git'
+       }
+       stage{'build'}
+       steps{
+              'mvn clean package'
+              }
+              }
+              }
