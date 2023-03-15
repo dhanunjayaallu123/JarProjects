@@ -6,7 +6,7 @@ maven 'local_maven'
 stages{
 stage('clone url'){
 steps{
-git branch: '*/master', url: 'https://github.com/dhanunjayaallu123/JarProjects.git'
+git branch: 'master', url: 'https://github.com/dhanunjayaallu123/JarProjects.git'
 }
 }
 stage('buil with maven'){
