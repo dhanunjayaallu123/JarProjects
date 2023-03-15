@@ -1,0 +1,23 @@
+pipeline{
+agent any 
+tools{
+maven 'local_maven'
+}
+stages{
+stage('clone url'){
+steps{
+clonig
+}
+}
+stage('buil with maven'){
+steps{
+bat 'mvn clean '
+}
+}
+stage('deploy to tomcat'){
+steps{
+echo 'deploy to tomcat container'
+}
+}
+}
+}
