@@ -1,7 +1,7 @@
 pipeline{
 agent any 
 tools{
-maven 'local_maven'
+maven 'apache-maven-3.9.0'
 }
 stages{
 stage('clone url'){
@@ -11,7 +11,7 @@ git branch: 'master', url: 'https://github.com/dhanunjayaallu123/JarProjects.git
 }
 stage('buil with maven'){
 steps{
-bat 'clean package'
+ bat '''mvn clean'''
 }
 }
 stage('deploy to tomcat'){
